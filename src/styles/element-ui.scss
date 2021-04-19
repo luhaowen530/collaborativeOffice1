@@ -1,0 +1,283 @@
+//覆盖一些element-ui样式
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+//暂时性解决dialog 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//文章页textarea修改样式
+.article-textarea {
+  textarea {
+    padding-right: 40px;
+    resize: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #bfcbd9;
+  }
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+//dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+
+// 自定义全局弹框样式
+.el-dialog {
+  // margin-top: 8vh !important;
+  border-radius: 15px !important;
+  // background: red !important;
+  // height: 700px;
+
+  .el-dialog__header {
+    background: #F4F4F4;
+    
+    .el-dialog__title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1555a0;
+      padding-bottom: 3px;
+      margin-left: 7px;
+    }
+    .el-dialog__headerbtn {
+      font-size: 24px;
+
+      .el-dialog__close {
+        color: #606266;
+        font-weight: bold;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 13px 17px 21px !important;
+    font-size: 16px;
+    color: #787878;
+    // height: calc(100% - 54px);
+    box-sizing: border-box;
+  }
+}
+
+// 自定义门户第二页工作通知页面的tabs样式
+.workbench-right-tabs {
+
+  .el-tabs__header {
+    margin-bottom: 0;
+
+    .el-tabs__nav-wrap {
+      padding-left: 18px;
+      background: #DAE3EA;
+    }
+    .el-tabs__nav {
+      
+      .el-tabs__item.is-active {
+        color: #297CEB;
+      }
+    }
+  }
+  .el-tabs__content {
+    height: calc(100% - 40px);
+    overflow: auto;
+  }
+}
+
+// 自定义门户第二个页面工作通知页面通讯录模块的input样式
+.mailList-right {
+
+  .mailList-right-input {
+
+    .el-input--medium {
+
+        .el-input__inner {
+            height: 40px;
+            line-height: 40px;
+            background: #E8E8E8;
+            border: 1px solid #C0C4CC;
+            font-size: 16px;
+        }
+    }
+  }
+}
+
+// 自定义工作台的待办流程弹框的宽度和高度
+.needdealt-dialog {
+  .el-dialog {
+    height: 844px;
+    margin-top: 46px !important;
+  }
+}
+// 自定义二维码弹框的宽度和高度
+.qr-dialog {
+  .el-dialog {
+    height: 500px;
+    margin-top: 260px !important;
+  }
+}
+// 自定义出入库弹框的宽度和高度
+.stock-dialog {
+  .el-dialog {
+    height: 700px;
+    margin-top: 160px !important;
+  }
+}
+
+
+// 自定义工作台弹框页面的tabs样式
+.needdealt-dialog-tabs {
+  .el-tabs__header {
+    background: #DAE3EA !important;
+    margin-bottom: 0;
+
+    .el-tabs__nav {
+      border: none !important;
+
+      .el-tabs__item {
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 14px;
+        color: #3D3D3D;
+        border-left: none !important;
+      }
+      .el-tabs__item.is-active {
+        border-bottom-color: #1555A0 !important;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 5px solid #1555A0;
+        font-size: 18px;
+        font-weight: bold;
+        background: #fff;
+        color: #1555A0;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0px 0px 5px 0px rgba(4, 4, 4, 0.35);
+      }
+    }
+  }
+}
+
+// 自定义工作台待办流程的弹框页面的tabs样式
+.needdealt-dialog-tabs {
+
+  .el-tabs__content {
+    height: calc(100% - 45px);
+    overflow: auto;
+  }
+}
+
+// 自定义工作台待办流程的弹框页面的表单样式
+.base-form-container {
+
+  .el-form-item__label {
+    color: #606266;
+    font-size: 16px;
+  }
+  .el-form-item__content {
+    width: calc(100% - 120px);
+
+    .el-date-editor {
+      width: 100%;
+    }
+  }
+  .base-form-bottom {
+
+    .business-form {
+
+      .business-reasons-input {
+
+          .el-textarea__inner {
+              height: 100% !important;
+          }
+      }
+    }
+  }
+}
+
+// 自定义各个页面的头部搜索组件的样式
+.top-search-form {
+
+  .el-form-item {
+    .el-form-item__label {
+      font-size: 16px;
+      color: #606266;
+    }
+  }
+}
+
+// 全局分页组件样式
+.pagination-container .el-input input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px !important;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+}
+.pagination-container .el-input__inner {
+  color: #606266;
+}
+
+// 表格组件样式
+.el-table::before {
+  height: 0;
+}
